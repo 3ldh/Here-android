@@ -6,13 +6,104 @@
     android:layout_height="match_parent"
     tools:context="com.example.mathieu.here.MainActivity">
 
-    <TextView
+    <android.support.constraint.Guideline
+        android:id="@+id/sharePositionGuidline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="474dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/findFriendGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="104dp" />
+
+    <ImageView
+        android:id="@+id/imageViewColorPink"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/findFriendGuideline"
+        app:srcCompat="@drawable/button_find_friend" />
+
+    <ImageView
+        android:id="@+id/imageColorBlue"
+        android:layout_width="439dp"
+        android:layout_height="447dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/sharePositionGuidline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/button_share_position" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_here" />
+
+    <Button
+        android:id="@+id/homeSharePositionBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="sharePosition"
+        android:paddingBottom="50dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="100dp"
+        android:text="Share My Position"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/midHorizontalGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/homeFindFriendBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="findFriend"
+        android:paddingLeft="150dp"
+        android:paddingRight="0dp"
+        android:paddingTop="50dp"
+        android:text="Find My Friend"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/midHorizontalGuide" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/midVerticalGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="192dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/midHorizontalGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="283dp" />
 
 </android.support.constraint.ConstraintLayout>
