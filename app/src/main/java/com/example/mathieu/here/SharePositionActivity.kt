@@ -22,8 +22,6 @@ import kotlinx.android.synthetic.main.activity_share_position.*
 import android.widget.Toast
 import android.content.Intent
 import android.net.Uri
-import android.R.attr.phoneNumber
-import android.preference.PreferenceManager
 import android.view.View
 
 
